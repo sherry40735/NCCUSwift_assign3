@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="si7-bt-aB6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MRT Stations-->
+        <scene sceneID="GRj-4a-XfB">
+            <objects>
+                <tableViewController id="m4S-hf-uTJ" customClass="MRTListViewController" customModule="Specs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="CMV-JW-dIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MRTCell" textLabel="gT4-4c-IQW" style="IBUITableViewCellStyleDefault" id="CzW-Zd-i4A">
+                                <rect key="frame" x="0.0" y="119.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CzW-Zd-i4A" id="CSU-Sn-3zg">
+                                    <frame key="frameInset" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gT4-4c-IQW">
+                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZCP-3K-lcw" kind="show" identifier="showDetail" id="xAa-LI-dTt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m4S-hf-uTJ" id="AfE-Ck-rGh"/>
+                            <outlet property="delegate" destination="m4S-hf-uTJ" id="3ZV-lo-KgB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MRT Stations" id="YBj-t1-sIQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HW1-0r-712" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--東門-->
+        <scene sceneID="vnj-kJ-3mZ">
+            <objects>
+                <viewController id="ZCP-3K-lcw" customClass="MRTDetailViewController" customModule="Specs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7T-8K-aCV"/>
+                        <viewControllerLayoutGuide type="bottom" id="q6R-K2-oMP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NFl-Mu-t3u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東門" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2L-yn-e93">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="vIf-YU-rcb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-11-MU3">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中和新蘆線" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i11-iE-18u">
+                                        <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="淡水信義線" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4x-KM-NeM">
+                                        <color key="backgroundColor" red="0.79607843137254897" green="0.17254901960784313" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="j4x-KM-NeM" firstAttribute="height" secondItem="i11-iE-18u" secondAttribute="height" id="0hz-4k-bX5"/>
+                                    <constraint firstAttribute="height" constant="100" id="kIk-I3-Wpm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F2L-yn-e93" firstAttribute="top" secondItem="g7T-8K-aCV" secondAttribute="bottom" id="24f-ET-u9A"/>
+                            <constraint firstItem="F2L-yn-e93" firstAttribute="leading" secondItem="NFl-Mu-t3u" secondAttribute="leadingMargin" id="86C-Cs-po4"/>
+                            <constraint firstItem="F2L-yn-e93" firstAttribute="trailing" secondItem="NFl-Mu-t3u" secondAttribute="trailingMargin" id="K6z-O0-4eJ"/>
+                            <constraint firstAttribute="trailing" secondItem="JeV-11-MU3" secondAttribute="trailing" id="Nsb-dD-TJQ"/>
+                            <constraint firstItem="JeV-11-MU3" firstAttribute="top" secondItem="F2L-yn-e93" secondAttribute="bottom" constant="8" id="THH-81-KFe"/>
+                            <constraint firstItem="JeV-11-MU3" firstAttribute="leading" secondItem="NFl-Mu-t3u" secondAttribute="leading" id="jU3-mT-lM9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="東門" id="nnc-wp-5NL"/>
+                    <connections>
+                        <outlet property="lbl_LineOne" destination="i11-iE-18u" id="SpL-rw-zyB"/>
+                        <outlet property="lbl_LineTwo" destination="j4x-KM-NeM" id="pyn-Gf-6yM"/>
+                        <outlet property="lbl_StationName" destination="F2L-yn-e93" id="SkU-FM-18Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ku1-sS-qkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2461.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="e7A-a8-shX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="si7-bt-aB6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igs-qm-oG9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m4S-hf-uTJ" kind="relationship" relationship="rootViewController" id="H0B-iq-q2a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNt-HX-Gzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="134.48275862068968"/>
+        </scene>
+    </scenes>
+</document>
